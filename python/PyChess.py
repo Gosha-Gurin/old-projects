@@ -1,7 +1,6 @@
 import numpy as np
 from colorama import init
 init(autoreset=True)
-f = open('log.txt', 'w')
 from colorama import Fore, Back, Style
 
 
@@ -61,7 +60,6 @@ while True:
     print(first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, eleventh, twelfth, thirteenth, fourteenth, fifteenth, sixteenth, seventeen, numbers, sep='\n')
     PLAY = input()
     if PLAY != 'stop':
-        f.write(str(MOVE(PLAY, DACK)))
         if DACK[MOVE(PLAY, DACK)[2], MOVE(PLAY, DACK)[3]] == ' ':
             DACK[MOVE(PLAY, DACK)[0], MOVE(PLAY, DACK)[1]], DACK[MOVE(PLAY, DACK)[2], MOVE(PLAY, DACK)[3]] = DACK[MOVE(PLAY, DACK)[2], MOVE(PLAY, DACK)[3]], DACK[MOVE(PLAY, DACK)[0], MOVE(PLAY, DACK)[1]]
         else:
@@ -69,4 +67,3 @@ while True:
             DACK[MOVE(PLAY, DACK)[0], MOVE(PLAY, DACK)[1]] = ' '
     else:
         break
-f.close()
